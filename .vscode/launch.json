@@ -1,0 +1,32 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Node.js Server",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/server.js", // Change this to your entry file
+      "stopOnEntry": false,
+      "args": [],
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": null,
+      "runtimeExecutable": null,
+      "runtimeArgs": [
+        "--inspect" // Enables Node.js inspector for debugging
+      ],
+      "env": {
+        "NODE_ENV": "development"
+      },
+      "sourceMaps": false,
+      "outFiles": [],
+      "externalConsole": false,
+      "serverReadyAction": {
+        "action": "openExternally",
+        "pattern": "\\bExpress\\slistening on\\shttp://127.0.0.1:(\\d+)",
+        "uriFormat": "http://127.0.0.1:%s",
+        "actionDelay": 500
+      },
+      "internalConsoleOptions": "openOnSessionStart"
+    }
+  ]
+}
